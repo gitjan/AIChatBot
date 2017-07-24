@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import tensorflow as tf
 import numpy as np
 
@@ -8,7 +10,7 @@ y = tf.placeholder("float")
 # w[0] is the "a" in our equation, w[1] is the "b"
 w = tf.Variable([1.0, 2.0], name="w")
 # Our model of y = a*x + b
-y_model = tf.mul(x, w[0]) + w[1]
+y_model = tf.multiply(x, w[0]) + w[1]
 
 # Our error is defined as the square of the differences
 error = tf.square(y - y_model)
